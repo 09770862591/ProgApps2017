@@ -1,61 +1,79 @@
+/* 863B Kayaking
+ * Author: Jean Michael J. Salazar
+ * Email: 2122831@slu.edu.ph
+ */
+public static int kayaking(int kaya){
 
-public static int kayakComputer(int kaya){
 		Scanner kbd = new Scanner(System.in);
 			int n = kbd.nextInt();
 			int w[] = new int[2*n];
-			for(int i = 0; i < 2 * n; i++) {
+			for(int i = 0; i < 2 * n; i++){
 				    w[i] = kbd.nextInt();
 				}
 			int ans=Integer.MAX_VALUE;
 			for(int i = 0; i < 2 * n; i++) {
-				for(int j = i + 1; j < 2 * n; j++) {
+				for(int j = i + 1; j < 2 * n; j++){
 				    int k = 0;
 				    int arr[] = new int[2 * n - 2];
-				    for(int h = 0; h < 2 * n; h++) {
+				    for(int h = 0; h < 2 * n; h++){
 				        if(h != i && h != j){
 				        arr[k++] = w[h];
 				        }
 				    }
 				      Arrays.sort(arr);
 				      int sum = 0;
-				      for(int h = 0; h < 2 * n - 2; h += 2) {
+				      for(int h = 0; h < 2 * n - 2; h += 2){
 				          sum = sum + Math.abs(arr[h + 1] - arr[h]);  
 				      }
-				      if(sum < ans) {
+				      if(sum < ans){
 				          ans = sum;
 				      }
 				}
 			}
 		return ans;
-	}
-	
-	public class apartmentCompute{
+	} /*
+	   * end of the line
+	   */
+
+
+/* 854B Maxim Buys an Apartment
+ * Author: Jean Michael J. Salazar
+ * Email: 2122831@slu.edu.ph
+ */
+	public class apartmentCompute {
 		public int apartmentCompute(int ans) {
 		Scanner kbd = new Scanner(System.in);
 		int n = kbd.nextInt();
 		int k = kbd.nextInt();
- 		if(k == n || k == 0) {
+ 		if(k == n || k == 0){
 			return 1;
 		} else {
 			return 0;
 		}
 	}
-		public int ans(int a){
+		public int ans(int a) {
 		a = n - k;
-		if(a > k * 2) {
+		if(a > k * 2){
 			a = k * 2;
 		}
 		return a;
-	}
+	} /*
+	   * end of the line
+	   */
 }
 
+
+/* 858B Which floor?
+ * Author: Jean Michael J. Salazar
+ * Email: 2122831@slu.edu.ph
+ */
 public static int floorCompute(int ans) {
 		Scanner kbd = new Scanner(System.in);
 		int a = kbd.nextInt();
 		int b = kbd.nextInt();
 		ans = 0;
 		int[][] d = new int[b][2];
-		for(int i = 0; i < b; i++) {
+		for(int i = 0; i < b; i++){
 			d[i][0] = kbd.nextInt();
 			d[i][1] = kbd.nextInt();
 		}
@@ -80,7 +98,15 @@ public static int floorCompute(int ans) {
 			}
 		}
 		return ans;
-	}
+	} /*
+	   * end of the line
+	   */
+
+
+/* 876A Trip for Meal
+ * Author: Jean Michael J. Salazar
+ * Email: 2122831@slu.edu.ph
+ */
 public class TripForMeal {
 
         public TripForMeal() {
@@ -104,5 +130,7 @@ public class TripForMeal {
 	    else
 		System,out.print(0);
     }
-}
+} /*
+   * end of the line
+   */
 
