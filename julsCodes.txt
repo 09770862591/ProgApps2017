@@ -1,5 +1,9 @@
-
-	public static double TableTennis(double n, double k, double j){
+/*
+ *Table Tennis
+ *Author: Julius Martinez
+ *Email: 2158590@slu.edu.ph
+ */
+	public static double playTableTennis(double n, double k, double j){
 		
 		long[] a = new long[(int)n];
 		long countw = 0;
@@ -31,7 +35,10 @@
 	   *end of the line
 	   */
 
-
+/*Race Against Time
+ *Author: Julius Martinez
+ *Email: 2158590@slu.edu.ph
+ */
 	public static int raceAgainstTime(int n1, int n2, int n3, int n4, int n5, int ans){
 	
 		if(n5 < n4){
@@ -58,8 +65,12 @@
 	  * end of line.
 	  */
 
-
-public static string quasiPalindrome(int num1, int num2, int num3){
+/*
+ *Quasi-Palindrome determiner
+ *Author: Julius Martinez
+ *Email: 2158590@slu.edu.ph
+ */
+public static string quasiPalindromeDeterminer(int num1, int num2, int num3){
 
 		while(num1 % 10 == 0){
 			num1 = num1 / 10;
