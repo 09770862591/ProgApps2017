@@ -1,0 +1,80 @@
+
+	public static double TableTennis(double n, double k, double j){
+		
+		long[] a = new long[(int)n];
+		long countw = 0;
+		long ans = 0;
+		
+		for(long i = 0; i < n; i++){
+			a[(int)i] = inp.nextLong();
+		}
+		for(long i = 0; i < n - 1; i++){
+			if(a[(int)i] > a[(int)(i + 1)]){
+				a[(int)(i + 1)] = a[(int)i];
+				ans = a[(int)i];
+				countw++;
+			}
+			if(countw == k){
+				break;
+			}
+			if(a[(int)i] < a[(int)(i + 1)]){
+				ans = a[(int)(i + 1)];
+				countw = 0;
+				countw++;
+			}
+			if(countw == k){
+				break;
+			}
+		}
+		return ans;
+	} /*
+	   *end of the line
+	   */
+
+
+	public static int raceAgainstTime(int n1, int n2, int n3, int n4, int n5, int ans){
+	
+		if(n5 < n4){
+			n5 = n5 ^ n4;
+			n4 = n5 ^ n4;
+			n5 = n5 ^ n4;
+		}
+		if(n1 < n5 && n1 >= n4){
+			ans++;
+		}
+		if(n2 < n5 * 5 && n2 >= n4 * 5){
+			ans++;
+		}
+		if(n3 < n5 * 5 && n3 >= n4 * 5){
+			ans++;
+		}
+		if(ans == 3 || ans == 0){
+			return"YES";
+		}else{
+			return"NO";
+		}
+		System.out.println();
+	}/*
+	  * end of line.
+	  */
+
+
+public static string quasiPalindrome(int num1, int num2, int num3){
+
+		while(num1 % 10 == 0){
+			num1 = num1 / 10;
+		}
+		num3 = num1;
+		num2 = 0;
+		while(num1 != 0){
+			num2 = num1 % 10 + num2 * 10;
+			num1 = num1 / 10;
+		}
+		if(num2 == num3){
+			return "YES, the number you inputed is quasi-palindromic.";
+		}else{
+			return "NO, the number you inputed is not quasi-palindromic. ";
+		}
+	}/*
+	  *end of line.
+	  */
