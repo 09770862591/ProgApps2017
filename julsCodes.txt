@@ -5,9 +5,12 @@
  */
 	public static double playTableTennis(double n, double k, double j){
 		
+		Scanner inp = new Scanner (System.in);
+		n = inp.nextDouble();
+		k = inp.nextDouble();
 		long[] a = new long[(int)n];
 		long countw = 0;
-		long ans = 0;
+		long ans = 0;	
 		
 		for(long i = 0; i < n; i++){
 			a[(int)i] = inp.nextLong();
@@ -41,6 +44,12 @@
  */
 	public static int raceAgainstTime(int n1, int n2, int n3, int n4, int n5, int ans){
 	
+		Scanner inp = new Scanner (System.in);
+		n1 = inp.nextInt();
+		n2 = inp.nextInt();
+		n3 = inp.nextInt();
+		n4 = inp.nextInt();
+		n5 = inp.nextInt();
 		if(n5 < n4){
 			n5 = n5 ^ n4;
 			n4 = n5 ^ n4;
@@ -71,6 +80,9 @@
  *Email: 2158590@slu.edu.ph
  */
 public static string quasiPalindromeDeterminer(int num1, int num2, int num3){
+
+		System.out.print("Input a number: ");
+		num1 = inp.nextInt();
 
 		while(num1 % 10 == 0){
 			num1 = num1 / 10;
