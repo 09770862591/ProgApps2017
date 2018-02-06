@@ -102,39 +102,42 @@ public static string quasiPalindromeDeterminer(int num1, int num2, int num3){
 	  *end of line.
 	  */
 
-
-	public static main tomRiddle() {
+/*
+ *Tom Riddler
+ *Author: Julius Martinez
+ *Email: 2158590@slu.edu.ph
+ */	
+	public static String tomRiddler(int n, string temp){
 		ArrayList<String> a=new ArrayList<String>();
-		int n;
-		string temp;
 	
 		for(int i=0;i<n;i++){
-			if(a.contains(temp)) {
+			if(a.contains(temp)){
 			return "YES";
-			}else 
-{
+			}else{
 			return "NO";
 			a.add(temp);
 			}
 		}
-	}
+	}/*
+	  *end of line.
+	  */
 
-	public void nikitaLetterCount() {
-		string s;
-		int countA =  0 ;
-		int dp1 = 0;
-		int dp2 = 0; 
-		for(int i =  0 ; i< s.length(); i++) 
-{
-			if(s.charAt(i)== 'a')
-{
+/*
+ *Nikita Letter Counter
+ *Author: Julius Martinez
+ *Email: 2158590@slu.edu.ph
+ */		
+	public void nikitaLetterCounter(string s, int countA, int dp1, int dp2){
+
+		for(int i =  0 ; i< s.length(); i++){
+			if(s.charAt(i)== 'a'){
 				countA ++;
 				dp1 = Math.max(dp1, dp2) +1;
-			}else 
-{
+			}else{
 				dp2 = Math.max(dp2, countA)+1;
 			}
 		}
-
 		return Math.max(dp1, dp2);
-	}
+	}/*
+	  *end of line.
+	  */
